@@ -176,6 +176,7 @@ public class princip extends javax.swing.JFrame {
 
     private void BotonSubirArchivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonSubirArchivoMouseClicked
         barri.setValue(0);
+        TextAreaArchivo.setText("");
         try {
             JFileChooser jfc = new JFileChooser();
             FileNameExtensionFilter filtro
@@ -214,12 +215,12 @@ public class princip extends javax.swing.JFrame {
                 bw.flush();
                 fw.close();
                 bw.close();
-                
+                JOptionPane.showMessageDialog(this, "archivo guardado exitosamente");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
-            JOptionPane.showMessageDialog(this, "vaya vea porno");
+            JOptionPane.showMessageDialog(this, "no hay archivo seleccionado");
         }
 
     }//GEN-LAST:event_BotonGuardarMouseClicked
